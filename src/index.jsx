@@ -1,15 +1,13 @@
 import { createRoot } from 'react-dom/client';
 
+import { MainView } from './components/main-view/main-view';
+
 // Bundle `./index.scss`
-import "./index.scss";
+import './index.scss';
 
 // Main component
 const MyFlixApplication = () => {
-    return (
-        <div className="my-flix">
-            <div>Good morning</div>
-        </div>
-    );
+    return <MainView />;
 };
 
 // Locates the root of your app
