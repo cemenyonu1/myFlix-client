@@ -14,12 +14,12 @@ export const MainView = () => {
         fetch(url + "/movies")
             .then((response) => response.json())
             .then((data) => {
-                const moviesFromApi = data.doc.map((doc) => {
+                const moviesFromApi = data.map((doc) => {
                     return {
                         id: doc.key,
                         title: doc.title,
                         image: doc.image,
-                        director: doc.director.name
+                        director: doc.director
                     };
                 });
                 setMovies(moviesFromApi);
