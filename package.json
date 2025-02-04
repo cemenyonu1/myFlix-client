@@ -16,7 +16,9 @@
   },
   "homepage": "https://github.com/cemenyonu1/myFlix-client#readme",
   "dependencies": {
+    "bootcamp": "^1.1.7",
     "react": "^19.0.0",
+    "react-bootcamp": "^0.0.1-security.5",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
