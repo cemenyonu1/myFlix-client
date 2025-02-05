@@ -33,6 +33,7 @@ export const MainView = () => {
                         title: movie.title,
                         image: movie.imagePath,
                         director: movie.director,
+                        description: movie.description,
                     };
                 });
                 setMovies(moviesFromApi);
@@ -70,18 +71,16 @@ export const MainView = () => {
     return (
         <Row className="justify-content-md-center">
             {!user ? (
-                <>
-                    <Col md={4} style={{ border: "1px solid green" }}>
-                        <LoginView
-                            onLoggedIn={(user, token) => {
-                                setUser(user);
-                                setToken(token);
-                            }}
-                        />
-                        or
-                        <SignupView />
-                    </Col>
-                </>
+                <Col md={5}>
+                    <LoginView
+                        onLoggedIn={(user, token) => {
+                            setUser(user);
+                            setToken(token);
+                        }}
+                    />
+                    or
+                    <SignupView />
+                </Col>
             ) : selectedMovie ? (
                 <Col md={8} style={{ border: "1px solid black" }}>
                     <MovieView
@@ -95,13 +94,14 @@ export const MainView = () => {
             ) : (
                 <>
                     {movies.map((movie) => (
-                        <MovieCard
-                            key={movie.id}
-                            movie={movie}
-                            onMovieClick={(newSelectedMovie) => {
-                                setSelectedMovie(newSelectedMovie);
-                            }}
-                        />
+                        <Col key={movie.id} md={3} className="mb-5 mt-5">
+                            <MovieCard
+                                movie={movie}
+                                onMovieClick={(newSelectedMovie) => {
+                                    setSelectedMovie(newSelectedMovie);
+                                }}
+                            />
+                        </Col>
                     ))}
                 </>
             )}
