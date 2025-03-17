@@ -8,6 +8,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
+import { AccountView } from "../account-view/account-view";
+import { MovieList } from "../movie-list/movie-list";
+import "./main-view.css";
 
 const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
 
@@ -18,6 +21,7 @@ export const MainView = () => {
     const [token, setToken] = useState(storedToken ? storedToken : null);
     const [movies, setMovies] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState(null);
+    const [favoriteMovies, setFavoriteMovies] = useState([]);
 
     useEffect(() => {
         if (!token) {
@@ -31,7 +35,7 @@ export const MainView = () => {
             .then((data) => {
                 const moviesFromApi = data.map((movie) => {
                     return {
-                        id: movie.key,
+                        id: movie._id,
                         title: movie.title,
                         image: movie.imagePath,
                         director: movie.director,
@@ -41,6 +45,31 @@ export const MainView = () => {
                 setMovies(moviesFromApi);
             });
     }, [token]);
+
+    //Toggle Favorite
+    const toggleFavorite = async (movieId, isFavorite) => {
+        const endpoint = `${url}/users/${username}/${movieId}`;
+        const method = isFavorite ? 'DELETE' : "PUT";
+
+        try {
+            const response = await fetch(endpoint, {
+                "Method": { method },
+                headers: {
+                    "Content-type": "appleication/json",
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Failed to update favorites list. ${response.status}`);
+            };
+            const updatedFavorites = await response.json();
+
+            //Update the user's favorite movie list
+            setFavoriteMovies();
+        } catch {
+
+        }
+    };
 
     //if (!user) {
     //  return (
@@ -72,6 +101,7 @@ export const MainView = () => {
 
     return (
         <BrowserRouter>
+
             <NavigationBar
                 user={user}
                 onLoggedOut={() => {
@@ -89,9 +119,9 @@ export const MainView = () => {
                                 {user ? (
                                     <Navigate to="/" />
                                 ) : (
-                                    <Col md={5}>
-                                        <SignupView />
-                                    </Col>
+
+                                    <SignupView />
+
                                 )}
                             </>
                         }
@@ -103,14 +133,14 @@ export const MainView = () => {
                                 {user ? (
                                     <Navigate to="/" />
                                 ) : (
-                                    <Col md={5}>
-                                        <LoginView
-                                            onLoggedIn={(user, token) => {
-                                                setUser(user);
-                                                setToken(token);
-                                            }}
-                                        />
-                                    </Col>
+
+                                    <LoginView
+                                        onLoggedIn={(user, token) => {
+                                            setUser(user);
+                                            setToken(token);
+                                        }}
+                                    />
+
                                 )}
                             </>
                         }
@@ -140,19 +170,33 @@ export const MainView = () => {
                                 ) : movies.length === 0 ? (
                                     <Col>There are no movies available</Col>
                                 ) : (
-                                    <>
-                                        {movies.map((movie) => (
-                                            <Col className="mb-4 mt-2" key={movie.id} md={3}>
-                                                <MovieCard movie={movie} />
-                                            </Col>
-                                        ))}
-                                    </>
+                                    <Col md={12}>
+                                        <MovieList movies={movies} />
+                                    </Col>
+                                )}
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/users"
+                        element={
+                            <>
+                                {!user ? (
+                                    <Navigate to="/login" replace />
+                                ) : (
+                                    <Col md={8}>
+                                        <AccountView
+
+                                        />
+                                    </Col>
+
                                 )}
                             </>
                         }
                     />
                 </Routes>
             </Row>
+
         </BrowserRouter>
 
         //   <React.Fragment>
@@ -167,5 +211,11 @@ export const MainView = () => {
         //      Logout
         //    </button>
         //  </React.Fragment>
+
+        // {movies.map((movie) => (
+        //    <Col className="mb-4 mt-2" key={movie.id} md={3}>
+        //        <MovieCard movie={movie} />
+        //     </Col>
+        //  ))}
     );
 };

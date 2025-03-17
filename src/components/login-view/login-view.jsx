@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import "./login-view.css";
+import { Container, Row, Card, Link, Col, CardGroup } from "react-bootstrap";
 
 const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
 
@@ -41,29 +43,45 @@ export const LoginView = ({ onLoggedIn }) => {
     };
 
     return (
-        <Form onSubmit={handleSubmit}>
-            <Form.Group>
-                <Form.Label controlId="formUsername">Username:</Form.Label>
-                <Form.Control
-                    type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                    minLength="3"
-                />
-            </Form.Group>
-            <Form.Group controlId="fromPassword">
-                <Form.Label>Password:</Form.Label>
-                <Form.Control
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-                Login
-            </Button>
-        </Form>
+        <>
+            <Container className="container fluid">
+                <Row className="justify-content-md-center">
+                    <Col md={12}>
+                        <CardGroup>
+                            <Card id="login-card">
+                                <Card.Body>
+                                    <Card.Title id="title">Login</Card.Title>
+                                    <Card.Subtitle id="register">If you do not have an account <Card.Link href="/signup">register here</Card.Link>.</Card.Subtitle>
+                                    <Form onSubmit={handleSubmit}>
+                                        <Form.Group>
+                                            <Form.Label controlId="formUsername">Username:</Form.Label>
+                                            <Form.Control
+                                                type="text"
+                                                value={username}
+                                                onChange={(e) => setUsername(e.target.value)}
+                                                required
+                                                minLength="3"
+                                            />
+                                        </Form.Group>
+                                        <Form.Group controlId="fromPassword">
+                                            <Form.Label>Password:</Form.Label>
+                                            <Form.Control
+                                                type="password"
+                                                value={password}
+                                                onChange={(e) => setPassword(e.target.value)}
+                                                required
+                                            />
+                                        </Form.Group>
+                                        <Button variant="primary" type="submit" id="submit">
+                                            Login
+                                        </Button>
+                                    </Form>
+                                </Card.Body>
+                            </Card>
+                        </CardGroup>
+                    </Col>
+                </Row>
+            </Container>
+        </>
     );
 };

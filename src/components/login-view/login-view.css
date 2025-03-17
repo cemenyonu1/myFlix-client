@@ -1,0 +1,40 @@
+#login-card {
+    background-color: rgb(141, 118, 5);
+    padding: 5%;
+    border: 0;
+}
+
+#title {
+    font-size: 32px;
+    color: white;
+}
+
+#register {
+    color: white;
+}
+
+.container {
+    background-image: url(../assets/movie-theater1.jpg.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+    margin: -1rem;
+}
+
+Form {
+    color: white;
+    margin-top: 20px;
+}
+
+#submit {
+    margin-top: 20px;
+}
