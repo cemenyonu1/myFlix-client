@@ -119,9 +119,9 @@ export const MainView = () => {
                                 {user ? (
                                     <Navigate to="/" />
                                 ) : (
-
-                                    <SignupView />
-
+                                    <Col md={12}>
+                                        <SignupView />
+                                    </Col>
                                 )}
                             </>
                         }
@@ -133,14 +133,14 @@ export const MainView = () => {
                                 {user ? (
                                     <Navigate to="/" />
                                 ) : (
-
-                                    <LoginView
-                                        onLoggedIn={(user, token) => {
-                                            setUser(user);
-                                            setToken(token);
-                                        }}
-                                    />
-
+                                    <Col md={12}>
+                                        <LoginView
+                                            onLoggedIn={(user, token) => {
+                                                setUser(user);
+                                                setToken(token);
+                                            }}
+                                        />
+                                    </Col>
                                 )}
                             </>
                         }

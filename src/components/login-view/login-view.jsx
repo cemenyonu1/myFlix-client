@@ -44,7 +44,7 @@ export const LoginView = ({ onLoggedIn }) => {
 
     return (
         <>
-            <Container className="container fluid">
+            <Container className="login-container" fluid>
                 <Row className="justify-content-md-center">
                     <Col md={12}>
                         <CardGroup>

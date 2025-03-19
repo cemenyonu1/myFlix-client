@@ -1,5 +1,5 @@
 #signup-card {
-    background-color: rgb(73, 61, 1);
+    background-color: rgb(141, 118, 5);
     padding: 5%;
     border: 0;
 }
@@ -14,7 +14,7 @@
 }
 
 .signup-container {
-    background: url(../assets/movie-theater.jpg) no-repeat;
+    background: url(../assets/movie-theater11.svg) no-repeat;
     background-size: cover;
     background-position: center;
     color: white;
@@ -26,6 +26,8 @@
     height: 100vh;
     width: 100vw;
     min-height: 100vh;
+    margin-left: -39.5rem;
+    margin-top: -3.5rem;
 }
 
 Form {

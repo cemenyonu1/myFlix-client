@@ -13,11 +13,10 @@
     color: white;
 }
 
-.container {
-    background-image: url(../assets/movie-theater1.jpg.svg);
+.login-container {
+    background: url(../assets/movie-theater11.svg) no-repeat;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     color: white;
     border: 0;
     display: flex;
@@ -27,7 +26,8 @@
     height: 100vh;
     width: 100vw;
     min-height: 100vh;
-    margin: -1rem;
+    margin-left: -39.5rem;
+    margin-top: -3.5rem;
 }
 
 Form {

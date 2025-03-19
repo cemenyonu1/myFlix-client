@@ -40,7 +40,7 @@ export const SignupView = () => {
 
     return (
         <>
-            <Container className="signup-container fluid">
+            <Container className="signup-container" fluid>
                 <Row className="justify-content-md-center">
                     <Col md={12}>
                         <Card id="signup-card">

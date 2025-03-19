@@ -13169,25 +13169,23 @@ textarea.form-control-lg {
   padding: 5%;
 }
 
-.container {
+.login-container {
   color: #fff;
-  background-image: url("movie-theater1.jpg.1888fd58.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("movie-theater11.37d8aec9.svg") center / cover no-repeat;
   border: 0;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
-  margin: -1rem;
+  margin-top: -3.5rem;
+  margin-left: -39.5rem;
   padding: 0;
   display: flex;
 }
 
 #signup-card {
-  background-color: #493d01;
+  background-color: #8d7605;
   border: 0;
   padding: 5%;
 }
@@ -13203,13 +13201,15 @@ textarea.form-control-lg {
 
 .signup-container {
   color: #fff;
-  background: url("movie-theater.f841a98f.jpg") center / cover no-repeat;
+  background: url("movie-theater11.37d8aec9.svg") center / cover no-repeat;
   border: 0;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
+  margin-top: -3.5rem;
+  margin-left: -39.5rem;
   padding: 0;
   display: flex;
 }
