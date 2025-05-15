@@ -32,7 +32,7 @@ export const NavigationBar = ({ user, onLoggedOut }) => {
                                 <Nav.Link as={Link} to='/'>
                                     Series
                                 </Nav.Link>
-                                <Nav.Link as={Link} to='/'>
+                                <Nav.Link as={Link} to='/my-list'>
                                     My List
                                 </Nav.Link>
                                 <Nav.Link as={Link} to='/'>

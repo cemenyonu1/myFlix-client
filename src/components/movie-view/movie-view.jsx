@@ -27,6 +27,11 @@ export const MovieView = ({ movies }) => {
                     Director: <div>{movie.director.name}</div>
                 </span>
             </div>
+            <div>
+                <span>
+                    Description: <div>{movie.description}</div>
+                </span>
+            </div>
             <Link to={"/"}>
                 <button className="back-button" style={{ cursor: "pointer" }}>
                     Back

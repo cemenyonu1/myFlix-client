@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
-export const MovieCard = ({ movie }) => {
+export const MovieCard = ({ movie, isFavorite }) => {
     token = localStorage.getItem('token');
 
     const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
@@ -12,22 +13,22 @@ export const MovieCard = ({ movie }) => {
     const [favoriteMovies, setFavoriteMovies] = useState([]);
     const [username, setUsername] = useState(localStorage.getItem('username'));
 
-    const addToFav = (movieId) => {
-        fetch(url + `/users/${username}/${movieId}`, {
-
-        })
+    const addToFav = (movie) => {
+        setFavoriteMovies([...favoriteMovies, movie])
     }
     return (
-        <Card className="h-100">
-            <Card.Img variant="top" src={movie.image} />
-            <Card.Body>
-                <Card.Title>{movie.title}</Card.Title>
-                <Card.Text>{movie.description}</Card.Text>
+        <>
+            <Card className="h-100">
                 <Link to={`/movies/${encodeURIComponent(movie.title)}`}>
-                    <Button variant="link">See More</Button>
+                    <Card.Img variant="top" src={movie.image} />
+
                 </Link>
-            </Card.Body>
-        </Card>
+                <Card.Body>
+                    <Card.Title>{movie.title}</Card.Title>
+                </Card.Body>
+            </Card>
+
+        </>
 
         //<div
         //  onClick={() => {

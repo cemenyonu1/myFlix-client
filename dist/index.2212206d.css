@@ -13184,10 +13184,16 @@ textarea.form-control-lg {
   display: flex;
 }
 
+#submit {
+  margin-top: 20px;
+  margin-left: 40%;
+}
+
 #signup-card {
   background-color: #8d7605;
   border: 0;
-  padding: 5%;
+  width: 25rem;
+  padding: 10%;
 }
 
 #title {
@@ -13219,16 +13225,13 @@ Form {
   margin-top: 20px;
 }
 
-#submit {
+#signup-submit {
   margin-top: 20px;
+  margin-left: 35%;
 }
 
 #main-view {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-width: 100vw;
-  min-height: 100vh;
-  padding: 0;
+  background: linear-gradient(0deg, #b39800 0%, #000 100%);
+  padding: 5rem;
 }
 /*# sourceMappingURL=index.2212206d.css.map */

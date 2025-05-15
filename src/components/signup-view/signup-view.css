@@ -1,7 +1,8 @@
 #signup-card {
     background-color: rgb(141, 118, 5);
-    padding: 5%;
+    padding: 10%;
     border: 0;
+    width: 25rem;
 }
 
 #title {
@@ -35,6 +36,7 @@ Form {
     margin-top: 20px;
 }
 
-#submit {
+#signup-submit {
     margin-top: 20px;
+    margin-left: 35%;
 }
