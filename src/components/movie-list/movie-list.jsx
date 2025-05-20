@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import { Container } from "react-bootstrap";
 
 
-export const MovieList = ({ movies, favoriteMovies, handleFavoriteMovies }) => {
+export const MovieList = ({ movies, favoriteMovies, handleFavoriteMovies, removeMovie }) => {
     const location = useLocation();
     //const userInfo = JSON.parse(localStorage.getItem('user')) || {};
     //const favoriteMovies = userInfo.favoriteList || [];
@@ -21,7 +21,9 @@ export const MovieList = ({ movies, favoriteMovies, handleFavoriteMovies }) => {
                 movie={m}
                 isFavorite={m.id}
                 favoriteMovies={favoriteMovies}
-                handleFavoriteMovies={handleFavoriteMovies} />
+                handleFavoriteMovies={handleFavoriteMovies}
+                removeMovie={removeMovie}
+            />
         </Col>)
     ) : [];
 

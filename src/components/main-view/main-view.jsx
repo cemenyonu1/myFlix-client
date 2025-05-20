@@ -53,6 +53,11 @@ export const MainView = () => {
         localStorage.setItem('user', JSON.stringify(updatedUser))
     };
 
+    const removeMovie = (movieId) => {
+        const updatedFavoriteMovies = favoriteMovies.filter((m) => m._id !== movieId);
+        handleFavoriteMovies(updatedFavoriteMovies)
+    };
+
     useEffect(() => {
         if (!token) {
             return;
@@ -201,7 +206,12 @@ export const MainView = () => {
                                         <Col>There are no movies available</Col>
                                     ) : (
 
-                                        <MovieList movies={movies} favoriteMovies={favoriteMovies} handleFavoriteMovies={handleFavoriteMovies} />
+                                        <MovieList
+                                            movies={movies}
+                                            favoriteMovies={favoriteMovies}
+                                            handleFavoriteMovies={handleFavoriteMovies}
+                                            removeMovie={removeMovie}
+                                        />
 
                                     )}
                                 </>
@@ -215,7 +225,10 @@ export const MainView = () => {
                                         <Navigate to="/login" replace />
                                     ) : (
                                         <Col md={8}>
-                                            <AccountView favoriteMovies={favoriteMovies} />
+                                            <AccountView
+                                                favoriteMovies={favoriteMovies}
+                                                removeMovie={removeMovie}
+                                            />
                                         </Col>
 
                                     )}
@@ -230,7 +243,10 @@ export const MainView = () => {
                                         <Navigate to="/login" replace />
                                     ) : (
                                         <Col md={8}>
-                                            <FavoriteList favoriteMovies={favoriteMovies} />
+                                            <FavoriteList
+                                                favoriteMovies={favoriteMovies}
+                                                removeMovie={removeMovie}
+                                            />
                                         </Col>
 
                                     )}

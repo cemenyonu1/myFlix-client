@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-export const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies }) => {
+export const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies, removeMovie }) => {
     const token = localStorage.getItem('token');
 
     const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
@@ -42,7 +42,7 @@ export const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies }) => {
                 <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
                     <button onClick={() => {
-                        addToFav(movie);
+                        addLabel ? removeMovie(movie._id) : addToFav(movie);
                     }}>{addLabel ? 'Remove from list' : 'Add to Favorites'}</button>
                 </Card.Body>
             </Card>

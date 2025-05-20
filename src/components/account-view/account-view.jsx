@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export const AccountView = ({ onLogout, favoriteMovies }) => {
+export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
     const user = JSON.parse(localStorage.getItem("user") || "null");
 
     const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
@@ -87,18 +87,27 @@ export const AccountView = ({ onLogout, favoriteMovies }) => {
 
         favoriteMovies.map((movie) => (
             <Col className="mb-4 mt-2" md={3} key={movie._id}>
-                <div className='d-flex justify-content-center'>
-                    <img
-                        src={movie.image}
-                        alt={movie.title}
-                        className="w-full h-auto rounded"
-                        style={{
-                            maxWidth: '100%',
-                            height: '200px',
-                            objectFit: 'cover'
-                        }}
-                    />
-                </div>
+                <Row>
+                    <div className='d-flex justify-content-center'>
+                        <img
+                            src={movie.image}
+                            alt={movie.title}
+                            className="w-full h-auto rounded"
+                            style={{
+                                maxWidth: '100%',
+                                height: '200px',
+                                objectFit: 'cover'
+                            }}
+                        />
+                    </div>
+                </Row>
+                <Row>
+                    <button onClick={() => {
+                        { removeMovie(movie._id) }
+                    }}>
+                        Remove
+                    </button>
+                </Row>
             </Col>
         )) || "None"
 
