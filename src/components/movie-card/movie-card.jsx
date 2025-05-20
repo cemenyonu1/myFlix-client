@@ -5,17 +5,33 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-export const MovieCard = ({ movie, isFavorite }) => {
-    token = localStorage.getItem('token');
+export const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies }) => {
+    const token = localStorage.getItem('token');
 
     const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
 
-    const [favoriteMovies, setFavoriteMovies] = useState([]);
-    const [username, setUsername] = useState(localStorage.getItem('username'));
+    //const favoriteMovieList = JSON.parse(localStorage.getItem('user.favoriteMovies'));
+    //const [favoriteMovies, setFavoriteMovies] = useState(() => {
+    //    const stored = localStorage.getItem('user.favoriteMovies');
+    //    return stored ? JSON.parse(stored) : [];
+    // });
+    //const [username, setUsername] = useState(localStorage.getItem('username'));
 
     const addToFav = (movie) => {
-        setFavoriteMovies([...favoriteMovies, movie])
-    }
+        handleFavoriteMovies((prev) => {
+            const inListAlready = prev.find((m) => m._id === movie._id);
+            if (inListAlready) return prev;
+
+            const update = [movie, ...prev];
+            localStorage.setItem('user.favoriteMovies', JSON.stringify(update));
+
+            return update;
+        });
+
+    };
+
+    const addLabel = favoriteMovies.find((m) => m._id === movie._id);
+
     return (
         <>
             <Card className="h-100">
@@ -25,6 +41,9 @@ export const MovieCard = ({ movie, isFavorite }) => {
                 </Link>
                 <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
+                    <button onClick={() => {
+                        addToFav(movie);
+                    }}>{addLabel ? 'Remove from list' : 'Add to Favorites'}</button>
                 </Card.Body>
             </Card>
 

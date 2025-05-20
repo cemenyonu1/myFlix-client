@@ -13178,6 +13178,8 @@ textarea.form-control-lg {
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
+  margin-top: -3.5rem;
+  margin-left: -39.5rem;
   padding: 0;
   display: flex;
 }
@@ -13232,4 +13234,4 @@ Form {
   background: linear-gradient(0deg, #b39800 0%, #000 100%);
   padding: 5rem;
 }
-/*# sourceMappingURL=index.2212206d.css.map */
+/*# sourceMappingURL=index.css.map */

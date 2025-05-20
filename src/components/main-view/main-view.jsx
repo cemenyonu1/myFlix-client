@@ -22,7 +22,36 @@ export const MainView = () => {
     const [token, setToken] = useState(storedToken ? storedToken : null);
     const [movies, setMovies] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState(null);
-    const [favoriteMovies, setFavoriteMovies] = useState([]);
+
+    const getParsedFavorites = () => {
+        try {
+            const stored = localStorage.getItem('user.favoriteMovies');
+            if (!stored || stored === 'undefined') return [];
+            return JSON.parse(stored);
+        } catch (err) {
+            console.log(err)
+        }
+    };
+
+    const [favoriteMovies, setFavoriteMovies] = useState(getParsedFavorites);
+
+
+
+    const handleFavoriteMovies = (updater) => {
+
+        const updatedList = typeof updater === 'function' ? updater(favoriteMovies) : updater;
+
+        setFavoriteMovies(updatedList);
+        localStorage.setItem('user.favoriteMovies', JSON.stringify(updatedList));
+
+        const updatedUser = {
+            ...user,
+            favoriteMovies: updatedList.map((m) => m._id)
+        };
+
+        setUser(updatedUser);
+        localStorage.setItem('user', JSON.stringify(updatedUser))
+    };
 
     useEffect(() => {
         if (!token) {
@@ -36,7 +65,7 @@ export const MainView = () => {
             .then((data) => {
                 const moviesFromApi = data.map((movie) => {
                     return {
-                        id: movie._id,
+                        _id: movie._id,
                         title: movie.title,
                         image: movie.imagePath,
                         director: movie.director,
@@ -172,7 +201,7 @@ export const MainView = () => {
                                         <Col>There are no movies available</Col>
                                     ) : (
 
-                                        <MovieList movies={movies} />
+                                        <MovieList movies={movies} favoriteMovies={favoriteMovies} handleFavoriteMovies={handleFavoriteMovies} />
 
                                     )}
                                 </>
@@ -186,9 +215,7 @@ export const MainView = () => {
                                         <Navigate to="/login" replace />
                                     ) : (
                                         <Col md={8}>
-                                            <AccountView
-
-                                            />
+                                            <AccountView favoriteMovies={favoriteMovies} />
                                         </Col>
 
                                     )}
@@ -203,9 +230,7 @@ export const MainView = () => {
                                         <Navigate to="/login" replace />
                                     ) : (
                                         <Col md={8}>
-                                            <FavoriteList
-
-                                            />
+                                            <FavoriteList favoriteMovies={favoriteMovies} />
                                         </Col>
 
                                     )}
