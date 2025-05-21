@@ -85,31 +85,36 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
 
     const favList = (
 
-        favoriteMovies.map((movie) => (
-            <Col className="mb-4 mt-2" md={3} key={movie._id}>
-                <Row>
-                    <div className='d-flex justify-content-center'>
-                        <img
-                            src={movie.image}
-                            alt={movie.title}
-                            className="w-full h-auto rounded"
-                            style={{
-                                maxWidth: '100%',
-                                height: '200px',
-                                objectFit: 'cover'
-                            }}
-                        />
-                    </div>
-                </Row>
-                <Row>
-                    <button onClick={() => {
-                        { removeMovie(movie._id) }
-                    }}>
-                        Remove
-                    </button>
-                </Row>
+        favoriteMovies.length === 0 ? (
+            <Col>
+                <h5>No movies in your list</h5>
             </Col>
-        )) || "None"
+        ) :
+            (favoriteMovies.map((movie) => (
+                <Col className="mb-4 mt-2" md={3} key={movie._id}>
+                    <Row>
+                        <div className='d-flex justify-content-center'>
+                            <img
+                                src={movie.image}
+                                alt={movie.title}
+                                className="w-full h-auto rounded"
+                                style={{
+                                    maxWidth: '100%',
+                                    height: '200px',
+                                    objectFit: 'cover'
+                                }}
+                            />
+                        </div>
+                    </Row>
+                    <Row>
+                        <button onClick={() => {
+                            { removeMovie(movie._id) }
+                        }}>
+                            Remove
+                        </button>
+                    </Row>
+                </Col>
+            )))
 
     )
 
@@ -124,26 +129,31 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                     <p>
                         <strong>Email:</strong> {user.email}
                     </p>
-                    <p>
-                        <strong>Favorite Movies:</strong>{" "}
-                    </p>
-                    <div className='border rounded p-2'>
-                        <Row className='justify-content-md-center'>
-                            {favList}
-                        </Row>
-                    </div>
-
                     <button
                         onClick={() => setEditing(true)}
                         className="mt-4 p-2 bg-blue-500 text-white rounded"
                     >
                         Edit
                     </button>
+                    <p>
+                        <strong>Favorite Movies:</strong>
+                    </p>
+                    <div className='border rounded p-2'>
+                        <Row className='justify-content-md-center'>
+                            {favList}
+                        </Row>
+                    </div>
                 </>
             ) : (
                 <form>
                     <div className="mb-4">
-                        <label htmlFor="username" className="block">
+                        <label
+                            htmlFor="username"
+                            className="block"
+                            style={{
+                                color: 'black',
+                                padding: '10px'
+                            }}>
                             Username
                         </label>
                         <input
@@ -155,7 +165,13 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                         />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="email" className="block">
+                        <label
+                            htmlFor="email"
+                            className="block"
+                            style={{
+                                color: 'black',
+                                padding: '10px'
+                            }}>
                             Email
                         </label>
                         <input
@@ -163,18 +179,6 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                             name="email"
                             type="email"
                             value={formData.email}
-                            className="w-full p-2 border rounded"
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="favoriteMovies" className="block">
-                            Favorite Movies
-                        </label>
-                        <input
-                            id="favoriteMovies"
-                            name="favoriteMovies"
-                            type="text"
-                            value={formData.favoriteMovies}
                             className="w-full p-2 border rounded"
                         />
                     </div>

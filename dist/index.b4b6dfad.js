@@ -35529,7 +35529,19 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
             setFavoriteMovies = favoriteMovies.filter((m)=>String(m.id) !== String(movieId));
         }).catch((err)=>console.log(err));
     };
-    const favList = favoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+    const favList = favoriteMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+            children: "No movies in your list"
+        }, void 0, false, {
+            fileName: "src/components/account-view/account-view.jsx",
+            lineNumber: 90,
+            columnNumber: 17
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/account-view/account-view.jsx",
+        lineNumber: 89,
+        columnNumber: 13
+    }, undefined) : favoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
             className: "mb-4 mt-2",
             md: 3,
             children: [
@@ -35547,18 +35559,18 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                             }
                         }, void 0, false, {
                             fileName: "src/components/account-view/account-view.jsx",
-                            lineNumber: 92,
-                            columnNumber: 25
+                            lineNumber: 97,
+                            columnNumber: 29
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 91,
-                        columnNumber: 21
+                        lineNumber: 96,
+                        columnNumber: 25
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/account-view/account-view.jsx",
-                    lineNumber: 90,
-                    columnNumber: 17
+                    lineNumber: 95,
+                    columnNumber: 21
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35568,20 +35580,20 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         children: "Remove"
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 105,
-                        columnNumber: 21
+                        lineNumber: 110,
+                        columnNumber: 25
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/account-view/account-view.jsx",
-                    lineNumber: 104,
-                    columnNumber: 17
+                    lineNumber: 109,
+                    columnNumber: 21
                 }, undefined)
             ]
         }, movie._id, true, {
             fileName: "src/components/account-view/account-view.jsx",
-            lineNumber: 89,
-            columnNumber: 13
-        }, undefined)) || "None";
+            lineNumber: 94,
+            columnNumber: 17
+        }, undefined));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "p-4 max-w-md mx-auto bg-white shadow-md rounded-lg",
         children: [
@@ -35590,7 +35602,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                 children: "Account Information"
             }, void 0, false, {
                 fileName: "src/components/account-view/account-view.jsx",
-                lineNumber: 118,
+                lineNumber: 123,
                 columnNumber: 13
             }, undefined),
             !editing ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -35601,7 +35613,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 children: "Username:"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 122,
+                                lineNumber: 127,
                                 columnNumber: 25
                             }, undefined),
                             " ",
@@ -35609,7 +35621,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 121,
+                        lineNumber: 126,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35618,7 +35630,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 children: "Email:"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 125,
+                                lineNumber: 130,
                                 columnNumber: 25
                             }, undefined),
                             " ",
@@ -35626,23 +35638,29 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 124,
+                        lineNumber: 129,
+                        columnNumber: 21
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>setEditing(true),
+                        className: "mt-4 p-2 bg-blue-500 text-white rounded",
+                        children: "Edit"
+                    }, void 0, false, {
+                        fileName: "src/components/account-view/account-view.jsx",
+                        lineNumber: 132,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                children: "Favorite Movies:"
-                            }, void 0, false, {
-                                fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 128,
-                                columnNumber: 25
-                            }, undefined),
-                            " "
-                        ]
-                    }, void 0, true, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                            children: "Favorite Movies:"
+                        }, void 0, false, {
+                            fileName: "src/components/account-view/account-view.jsx",
+                            lineNumber: 139,
+                            columnNumber: 25
+                        }, undefined)
+                    }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 127,
+                        lineNumber: 138,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35652,21 +35670,12 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                             children: favList
                         }, void 0, false, {
                             fileName: "src/components/account-view/account-view.jsx",
-                            lineNumber: 131,
+                            lineNumber: 142,
                             columnNumber: 25
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 130,
-                        columnNumber: 21
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: ()=>setEditing(true),
-                        className: "mt-4 p-2 bg-blue-500 text-white rounded",
-                        children: "Edit"
-                    }, void 0, false, {
-                        fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 136,
+                        lineNumber: 141,
                         columnNumber: 21
                     }, undefined)
                 ]
@@ -35678,10 +35687,14 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                 htmlFor: "username",
                                 className: "block",
+                                style: {
+                                    color: 'black',
+                                    padding: '10px'
+                                },
                                 children: "Username"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 146,
+                                lineNumber: 150,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35692,13 +35705,13 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 className: "w-full p-2 border rounded"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 149,
+                                lineNumber: 159,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 145,
+                        lineNumber: 149,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35707,10 +35720,14 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                                 htmlFor: "email",
                                 className: "block",
+                                style: {
+                                    color: 'black',
+                                    padding: '10px'
+                                },
                                 children: "Email"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 158,
+                                lineNumber: 168,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35721,42 +35738,13 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 className: "w-full p-2 border rounded"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 161,
+                                lineNumber: 177,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 157,
-                        columnNumber: 21
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "mb-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                htmlFor: "favoriteMovies",
-                                className: "block",
-                                children: "Favorite Movies"
-                            }, void 0, false, {
-                                fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 170,
-                                columnNumber: 25
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                id: "favoriteMovies",
-                                name: "favoriteMovies",
-                                type: "text",
-                                value: formData.favoriteMovies,
-                                className: "w-full p-2 border rounded"
-                            }, void 0, false, {
-                                fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 173,
-                                columnNumber: 25
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 169,
+                        lineNumber: 167,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35765,7 +35753,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         children: "Delete Account"
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 181,
+                        lineNumber: 185,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35774,19 +35762,19 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         children: "Save Changes"
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 184,
+                        lineNumber: 188,
                         columnNumber: 21
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/account-view/account-view.jsx",
-                lineNumber: 144,
+                lineNumber: 148,
                 columnNumber: 17
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/account-view/account-view.jsx",
-        lineNumber: 117,
+        lineNumber: 122,
         columnNumber: 9
     }, undefined);
 };
@@ -35882,7 +35870,22 @@ var _rowDefault = parcelHelpers.interopDefault(_row);
 var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
 const FavoriteList = ({ favoriteMovies, removeMovie })=>{
-    const favList = favoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+    const favList = favoriteMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+            style: {
+                color: 'white'
+            },
+            children: "No movies in your list"
+        }, void 0, false, {
+            fileName: "src/components/favorite-list/favorite-list.jsx",
+            lineNumber: 13,
+            columnNumber: 17
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/favorite-list/favorite-list.jsx",
+        lineNumber: 12,
+        columnNumber: 13
+    }, undefined) : favoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
             className: "mb-4 mt-2",
             md: 3,
             children: [
@@ -35900,23 +35903,23 @@ const FavoriteList = ({ favoriteMovies, removeMovie })=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/components/favorite-list/favorite-list.jsx",
-                                lineNumber: 16,
-                                columnNumber: 29
+                                lineNumber: 25,
+                                columnNumber: 33
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/favorite-list/favorite-list.jsx",
-                            lineNumber: 15,
-                            columnNumber: 25
+                            lineNumber: 24,
+                            columnNumber: 29
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/favorite-list/favorite-list.jsx",
-                        lineNumber: 14,
-                        columnNumber: 21
+                        lineNumber: 23,
+                        columnNumber: 25
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/favorite-list/favorite-list.jsx",
-                    lineNumber: 13,
-                    columnNumber: 17
+                    lineNumber: 22,
+                    columnNumber: 21
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35926,37 +35929,37 @@ const FavoriteList = ({ favoriteMovies, removeMovie })=>{
                         children: "Remove"
                     }, void 0, false, {
                         fileName: "src/components/favorite-list/favorite-list.jsx",
-                        lineNumber: 29,
-                        columnNumber: 21
+                        lineNumber: 38,
+                        columnNumber: 25
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/favorite-list/favorite-list.jsx",
-                    lineNumber: 28,
-                    columnNumber: 17
+                    lineNumber: 37,
+                    columnNumber: 21
                 }, undefined)
             ]
         }, movie._id, true, {
             fileName: "src/components/favorite-list/favorite-list.jsx",
-            lineNumber: 12,
-            columnNumber: 13
+            lineNumber: 21,
+            columnNumber: 17
         }, undefined));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 style: {
                     color: 'white'
                 },
                 children: "Favorite Movies"
             }, void 0, false, {
                 fileName: "src/components/favorite-list/favorite-list.jsx",
-                lineNumber: 43,
+                lineNumber: 52,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
                 children: favList
             }, void 0, false, {
                 fileName: "src/components/favorite-list/favorite-list.jsx",
-                lineNumber: 46,
+                lineNumber: 55,
                 columnNumber: 13
             }, undefined)
         ]
