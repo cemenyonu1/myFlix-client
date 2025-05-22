@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { FavoriteList } from "../favorite-list/favorite-list";
 
 export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
     const user = JSON.parse(localStorage.getItem("user") || "null");
@@ -83,40 +84,45 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
         }).catch((err) => console.log(err))
     }
 
-    const favList = (
+    //const favList = () => {
+    //    const [isHover, setIsHover] = useState(false);
+    //    favoriteMovies.length === 0 ? (
+    //        <Col>
+    //            <h5>No movies in your list</h5>
+    //        </Col>
+    //    ) :
+    //        (favoriteMovies.map((movie) => (
+    //            <Col className="mb-4 mt-2" md={3} key={movie._id}>
+    //                <Row>
+    //                    <div
+    //                        className='d-flex justify-content-center'
+    //                        onMouseEnter={() => { setIsHover(true) }}
+    //                        onMouseLeave={() => { setIsHover(false) }}
+    //                    >
+    //                        <img
+    //                            src={movie.image}
+    //                          alt={movie.title}
+    //                           className="w-full h-auto rounded"
+    //                            style={{
+    //                                maxWidth: '100%',
+    //                               height: '200px',
+    //                               objectFit: 'cover'
+    //                           }}
+    //                        />
+    //                    </div>
+    //                    {isHover && <div>
+    //                        <button onClick={() => {
+    //                            { removeMovie(movie._id) }
+    //                        }}>
+    //                            Remove
+    //                        </button>
+    //                    </div>
+    //                    }
+    //                </Row>
+    //            </Col>
+    //        )))
 
-        favoriteMovies.length === 0 ? (
-            <Col>
-                <h5>No movies in your list</h5>
-            </Col>
-        ) :
-            (favoriteMovies.map((movie) => (
-                <Col className="mb-4 mt-2" md={3} key={movie._id}>
-                    <Row>
-                        <div className='d-flex justify-content-center'>
-                            <img
-                                src={movie.image}
-                                alt={movie.title}
-                                className="w-full h-auto rounded"
-                                style={{
-                                    maxWidth: '100%',
-                                    height: '200px',
-                                    objectFit: 'cover'
-                                }}
-                            />
-                        </div>
-                    </Row>
-                    <Row>
-                        <button onClick={() => {
-                            { removeMovie(movie._id) }
-                        }}>
-                            Remove
-                        </button>
-                    </Row>
-                </Col>
-            )))
-
-    )
+    //}
 
     return (
         <div className="p-4 max-w-md mx-auto bg-white shadow-md rounded-lg">
@@ -140,7 +146,10 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                     </p>
                     <div className='border rounded p-2'>
                         <Row className='justify-content-md-center'>
-                            {favList}
+                            <FavoriteList
+                                favoriteMovies={favoriteMovies}
+                                removeMovie={removeMovie}
+                            />
                         </Row>
                     </div>
                 </>

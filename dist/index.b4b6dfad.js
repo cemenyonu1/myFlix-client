@@ -19341,7 +19341,7 @@ const MainView = ()=>{
                     }
                 }, void 0, false, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 140,
+                    lineNumber: 141,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
@@ -19355,24 +19355,24 @@ const MainView = ()=>{
                                         to: "/"
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 155,
+                                        lineNumber: 156,
                                         columnNumber: 41
                                     }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                         md: 12,
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _signupView.SignupView), {}, void 0, false, {
                                             fileName: "src/components/main-view/main-view.jsx",
-                                            lineNumber: 158,
+                                            lineNumber: 159,
                                             columnNumber: 45
                                         }, void 0)
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 157,
+                                        lineNumber: 158,
                                         columnNumber: 41
                                     }, void 0)
                                 }, void 0, false)
                             }, void 0, false, {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 150,
+                                lineNumber: 151,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -19382,7 +19382,7 @@ const MainView = ()=>{
                                         to: "/"
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 169,
+                                        lineNumber: 170,
                                         columnNumber: 41
                                     }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                         md: 12,
@@ -19393,18 +19393,18 @@ const MainView = ()=>{
                                             }
                                         }, void 0, false, {
                                             fileName: "src/components/main-view/main-view.jsx",
-                                            lineNumber: 172,
+                                            lineNumber: 173,
                                             columnNumber: 45
                                         }, void 0)
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 171,
+                                        lineNumber: 172,
                                         columnNumber: 41
                                     }, void 0)
                                 }, void 0, false)
                             }, void 0, false, {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 164,
+                                lineNumber: 165,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -19415,13 +19415,13 @@ const MainView = ()=>{
                                         replace: true
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 188,
+                                        lineNumber: 189,
                                         columnNumber: 41
                                     }, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                         children: "There are no movies available."
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 190,
+                                        lineNumber: 191,
                                         columnNumber: 41
                                     }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                         md: 8,
@@ -19429,18 +19429,18 @@ const MainView = ()=>{
                                             movies: movies
                                         }, void 0, false, {
                                             fileName: "src/components/main-view/main-view.jsx",
-                                            lineNumber: 193,
+                                            lineNumber: 194,
                                             columnNumber: 45
                                         }, void 0)
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 192,
+                                        lineNumber: 193,
                                         columnNumber: 41
                                     }, void 0)
                                 }, void 0, false)
                             }, void 0, false, {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 183,
+                                lineNumber: 184,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -19451,13 +19451,13 @@ const MainView = ()=>{
                                         replace: true
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 204,
+                                        lineNumber: 205,
                                         columnNumber: 41
                                     }, void 0) : movies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                         children: "There are no movies available"
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 206,
+                                        lineNumber: 207,
                                         columnNumber: 41
                                     }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieList.MovieList), {
                                         movies: movies,
@@ -19466,13 +19466,13 @@ const MainView = ()=>{
                                         removeMovie: removeMovie
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 209,
+                                        lineNumber: 210,
                                         columnNumber: 41
                                     }, void 0)
                                 }, void 0, false)
                             }, void 0, false, {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 199,
+                                lineNumber: 200,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -19483,7 +19483,7 @@ const MainView = ()=>{
                                         replace: true
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 225,
+                                        lineNumber: 226,
                                         columnNumber: 41
                                     }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
                                         md: 8,
@@ -19492,18 +19492,18 @@ const MainView = ()=>{
                                             removeMovie: removeMovie
                                         }, void 0, false, {
                                             fileName: "src/components/main-view/main-view.jsx",
-                                            lineNumber: 228,
+                                            lineNumber: 229,
                                             columnNumber: 45
                                         }, void 0)
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 227,
+                                        lineNumber: 228,
                                         columnNumber: 41
                                     }, void 0)
                                 }, void 0, false)
                             }, void 0, false, {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 220,
+                                lineNumber: 221,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -19514,49 +19514,42 @@ const MainView = ()=>{
                                         replace: true
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 243,
+                                        lineNumber: 244,
                                         columnNumber: 41
-                                    }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                                        md: 8,
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favoriteList.FavoriteList), {
-                                            favoriteMovies: favoriteMovies,
-                                            removeMovie: removeMovie
-                                        }, void 0, false, {
-                                            fileName: "src/components/main-view/main-view.jsx",
-                                            lineNumber: 246,
-                                            columnNumber: 45
-                                        }, void 0)
+                                    }, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favoriteList.FavoriteList), {
+                                        favoriteMovies: favoriteMovies,
+                                        removeMovie: removeMovie
                                     }, void 0, false, {
                                         fileName: "src/components/main-view/main-view.jsx",
-                                        lineNumber: 245,
+                                        lineNumber: 247,
                                         columnNumber: 41
                                     }, void 0)
                                 }, void 0, false)
                             }, void 0, false, {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 238,
+                                lineNumber: 239,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 149,
+                        lineNumber: 150,
                         columnNumber: 21
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 148,
+                    lineNumber: 149,
                     columnNumber: 17
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/main-view/main-view.jsx",
-            lineNumber: 139,
+            lineNumber: 140,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 138,
+        lineNumber: 139,
         columnNumber: 9
     }, undefined);
 };
@@ -19587,15 +19580,12 @@ var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
 const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies, removeMovie })=>{
+    _s();
     const token = localStorage.getItem('token');
     const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
-    //const favoriteMovieList = JSON.parse(localStorage.getItem('user.favoriteMovies'));
-    //const [favoriteMovies, setFavoriteMovies] = useState(() => {
-    //    const stored = localStorage.getItem('user.favoriteMovies');
-    //    return stored ? JSON.parse(stored) : [];
-    // });
-    //const [username, setUsername] = useState(localStorage.getItem('username'));
+    const [isHover, setIsHover] = (0, _react.useState)(false);
     const addToFav = (movie)=>{
         handleFavoriteMovies((prev)=>{
             const inListAlready = prev.find((m)=>m._id === movie._id);
@@ -19612,55 +19602,83 @@ const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies, removeMovie })
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card), {
             className: "h-100",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "image-container",
+                onMouseEnter: ()=>setIsHover(true),
+                onMouseLeave: ()=>setIsHover(false),
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                     to: `/movies/${encodeURIComponent(movie.title)}`,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Img, {
-                        variant: "top",
-                        src: movie.image
-                    }, void 0, false, {
-                        fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 39,
-                        columnNumber: 21
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 38,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Body, {
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Title, {
-                            children: movie.title
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Img, {
+                            variant: "top",
+                            src: movie.image,
+                            style: {
+                                maxWidth: '100%',
+                                height: '400px'
+                            }
                         }, void 0, false, {
                             fileName: "src/components/movie-card/movie-card.jsx",
                             lineNumber: 43,
-                            columnNumber: 21
+                            columnNumber: 25
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            onClick: ()=>{
-                                addLabel ? removeMovie(movie._id) : addToFav(movie);
+                        isHover && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            style: {
+                                position: 'absolute',
+                                bottom: '0',
+                                backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                                color: 'white',
+                                width: '100%',
+                                textAlign: 'center',
+                                padding: '8px',
+                                fontWeight: 'bold',
+                                opacity: '1',
+                                transition: 'opacity 0.3s ease-in-out',
+                                zIndex: '1'
                             },
-                            children: addLabel ? 'Remove from list' : 'Add to Favorites'
-                        }, void 0, false, {
+                            children: [
+                                movie.title,
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                    fileName: "src/components/movie-card/movie-card.jsx",
+                                    lineNumber: 64,
+                                    columnNumber: 42
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    onClick: (event)=>{
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                        addLabel ? removeMovie(movie._id) : addToFav(movie);
+                                    },
+                                    children: addLabel ? 'Remove From My List' : 'Add To My List'
+                                }, void 0, false, {
+                                    fileName: "src/components/movie-card/movie-card.jsx",
+                                    lineNumber: 65,
+                                    columnNumber: 29
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
                             fileName: "src/components/movie-card/movie-card.jsx",
-                            lineNumber: 44,
-                            columnNumber: 21
+                            lineNumber: 51,
+                            columnNumber: 37
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 42,
-                    columnNumber: 17
+                    lineNumber: 40,
+                    columnNumber: 21
                 }, undefined)
-            ]
-        }, void 0, true, {
+            }, void 0, false, {
+                fileName: "src/components/movie-card/movie-card.jsx",
+                lineNumber: 35,
+                columnNumber: 17
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/components/movie-card/movie-card.jsx",
-            lineNumber: 37,
+            lineNumber: 34,
             columnNumber: 13
         }, undefined)
     }, void 0, false);
 };
+_s(MovieCard, "FTC8EpIspi2qaDtU9gFRhqZT02A=");
 _c = MovieCard;
 MovieCard.propTypes = {
     movie: (0, _propTypesDefault.default).shape({
@@ -35460,6 +35478,7 @@ var _row = require("react-bootstrap/Row");
 var _rowDefault = parcelHelpers.interopDefault(_row);
 var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
+var _favoriteList = require("../favorite-list/favorite-list");
 var _s = $RefreshSig$();
 const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
     _s();
@@ -35491,7 +35510,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
         children: "No user data found."
     }, void 0, false, {
         fileName: "src/components/account-view/account-view.jsx",
-        lineNumber: 36,
+        lineNumber: 37,
         columnNumber: 16
     }, undefined);
     const deleteUser = ()=>{
@@ -35529,71 +35548,44 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
             setFavoriteMovies = favoriteMovies.filter((m)=>String(m.id) !== String(movieId));
         }).catch((err)=>console.log(err));
     };
-    const favList = favoriteMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-            children: "No movies in your list"
-        }, void 0, false, {
-            fileName: "src/components/account-view/account-view.jsx",
-            lineNumber: 90,
-            columnNumber: 17
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/account-view/account-view.jsx",
-        lineNumber: 89,
-        columnNumber: 13
-    }, undefined) : favoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-            className: "mb-4 mt-2",
-            md: 3,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "d-flex justify-content-center",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: movie.image,
-                            alt: movie.title,
-                            className: "w-full h-auto rounded",
-                            style: {
-                                maxWidth: '100%',
-                                height: '200px',
-                                objectFit: 'cover'
-                            }
-                        }, void 0, false, {
-                            fileName: "src/components/account-view/account-view.jsx",
-                            lineNumber: 97,
-                            columnNumber: 29
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 96,
-                        columnNumber: 25
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/account-view/account-view.jsx",
-                    lineNumber: 95,
-                    columnNumber: 21
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: ()=>{
-                            removeMovie(movie._id);
-                        },
-                        children: "Remove"
-                    }, void 0, false, {
-                        fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 110,
-                        columnNumber: 25
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/account-view/account-view.jsx",
-                    lineNumber: 109,
-                    columnNumber: 21
-                }, undefined)
-            ]
-        }, movie._id, true, {
-            fileName: "src/components/account-view/account-view.jsx",
-            lineNumber: 94,
-            columnNumber: 17
-        }, undefined));
+    //const favList = () => {
+    //    const [isHover, setIsHover] = useState(false);
+    //    favoriteMovies.length === 0 ? (
+    //        <Col>
+    //            <h5>No movies in your list</h5>
+    //        </Col>
+    //    ) :
+    //        (favoriteMovies.map((movie) => (
+    //            <Col className="mb-4 mt-2" md={3} key={movie._id}>
+    //                <Row>
+    //                    <div
+    //                        className='d-flex justify-content-center'
+    //                        onMouseEnter={() => { setIsHover(true) }}
+    //                        onMouseLeave={() => { setIsHover(false) }}
+    //                    >
+    //                        <img
+    //                            src={movie.image}
+    //                          alt={movie.title}
+    //                           className="w-full h-auto rounded"
+    //                            style={{
+    //                                maxWidth: '100%',
+    //                               height: '200px',
+    //                               objectFit: 'cover'
+    //                           }}
+    //                        />
+    //                    </div>
+    //                    {isHover && <div>
+    //                        <button onClick={() => {
+    //                            { removeMovie(movie._id) }
+    //                        }}>
+    //                            Remove
+    //                        </button>
+    //                    </div>
+    //                    }
+    //                </Row>
+    //            </Col>
+    //        )))
+    //}
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "p-4 max-w-md mx-auto bg-white shadow-md rounded-lg",
         children: [
@@ -35602,7 +35594,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                 children: "Account Information"
             }, void 0, false, {
                 fileName: "src/components/account-view/account-view.jsx",
-                lineNumber: 123,
+                lineNumber: 129,
                 columnNumber: 13
             }, undefined),
             !editing ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -35613,7 +35605,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 children: "Username:"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 127,
+                                lineNumber: 133,
                                 columnNumber: 25
                             }, undefined),
                             " ",
@@ -35621,7 +35613,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 126,
+                        lineNumber: 132,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35630,7 +35622,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 children: "Email:"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 130,
+                                lineNumber: 136,
                                 columnNumber: 25
                             }, undefined),
                             " ",
@@ -35638,7 +35630,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 129,
+                        lineNumber: 135,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35647,7 +35639,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         children: "Edit"
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 132,
+                        lineNumber: 138,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35655,27 +35647,34 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                             children: "Favorite Movies:"
                         }, void 0, false, {
                             fileName: "src/components/account-view/account-view.jsx",
-                            lineNumber: 139,
+                            lineNumber: 145,
                             columnNumber: 25
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 138,
+                        lineNumber: 144,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "border rounded p-2",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
                             className: "justify-content-md-center",
-                            children: favList
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favoriteList.FavoriteList), {
+                                favoriteMovies: favoriteMovies,
+                                removeMovie: removeMovie
+                            }, void 0, false, {
+                                fileName: "src/components/account-view/account-view.jsx",
+                                lineNumber: 149,
+                                columnNumber: 29
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/account-view/account-view.jsx",
-                            lineNumber: 142,
+                            lineNumber: 148,
                             columnNumber: 25
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 141,
+                        lineNumber: 147,
                         columnNumber: 21
                     }, undefined)
                 ]
@@ -35694,7 +35693,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 children: "Username"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 150,
+                                lineNumber: 159,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35705,13 +35704,13 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 className: "w-full p-2 border rounded"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 159,
+                                lineNumber: 168,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 149,
+                        lineNumber: 158,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35727,7 +35726,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 children: "Email"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 168,
+                                lineNumber: 177,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35738,13 +35737,13 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 className: "w-full p-2 border rounded"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 177,
+                                lineNumber: 186,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 167,
+                        lineNumber: 176,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35753,7 +35752,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         children: "Delete Account"
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 185,
+                        lineNumber: 194,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35762,19 +35761,19 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         children: "Save Changes"
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 188,
+                        lineNumber: 197,
                         columnNumber: 21
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/account-view/account-view.jsx",
-                lineNumber: 148,
+                lineNumber: 157,
                 columnNumber: 17
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/account-view/account-view.jsx",
-        lineNumber: 122,
+        lineNumber: 128,
         columnNumber: 9
     }, undefined);
 };
@@ -35788,7 +35787,184 @@ $RefreshReg$(_c, "AccountView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6"}],"5kraV":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","../favorite-list/favorite-list":"4OX7W"}],"4OX7W":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$63ae = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$63ae.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FavoriteList", ()=>FavoriteList);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+var _row = require("react-bootstrap/Row");
+var _rowDefault = parcelHelpers.interopDefault(_row);
+var _col = require("react-bootstrap/Col");
+var _colDefault = parcelHelpers.interopDefault(_col);
+var _reactBootstrap = require("react-bootstrap");
+var _favoriteCard = require("../favorite-card/favorite-card");
+const FavoriteList = ({ favoriteMovies, removeMovie })=>{
+    //const [isHover, setIsHover] = useState(false);
+    const favList = favoriteMovies.map((movie)=>{
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favoriteCard.FavoriteCard), {
+            movie: movie,
+            removeMovie: removeMovie
+        }, movie._id, false, {
+            fileName: "src/components/favorite-list/favorite-list.jsx",
+            lineNumber: 18,
+            columnNumber: 20
+        }, undefined);
+    });
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                style: {
+                    color: 'white'
+                },
+                children: "Favorite Movies"
+            }, void 0, false, {
+                fileName: "src/components/favorite-list/favorite-list.jsx",
+                lineNumber: 29,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+                children: favList ? favList : 'No Saved Titles'
+            }, void 0, false, {
+                fileName: "src/components/favorite-list/favorite-list.jsx",
+                lineNumber: 32,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_c = FavoriteList;
+var _c;
+$RefreshReg$(_c, "FavoriteList");
+
+  $parcel$ReactRefreshHelpers$63ae.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"fdOAw","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","react-bootstrap":"3AD9A","../favorite-card/favorite-card":"gABf5"}],"gABf5":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$138a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$138a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FavoriteCard", ()=>FavoriteCard);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+var _row = require("react-bootstrap/Row");
+var _rowDefault = parcelHelpers.interopDefault(_row);
+var _col = require("react-bootstrap/Col");
+var _colDefault = parcelHelpers.interopDefault(_col);
+var _reactBootstrap = require("react-bootstrap");
+var _s = $RefreshSig$();
+const FavoriteCard = ({ movie, removeMovie })=>{
+    _s();
+    const [isHover, setIsHover] = (0, _react.useState)(false);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
+        className: "mb-4 mt-2",
+        xs: 12,
+        sm: 6,
+        md: 4,
+        lg: 3,
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "d-flex justify-content-center position-relative",
+                onMouseEnter: ()=>{
+                    setIsHover(true);
+                },
+                onMouseLeave: ()=>{
+                    setIsHover(false);
+                },
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    to: `movies/${movie.title}`,
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: movie.image,
+                            alt: movie.title,
+                            style: {
+                                maxWidth: '100%',
+                                aspectRatio: '2 / 3'
+                            }
+                        }, void 0, false, {
+                            fileName: "src/components/favorite-card/favorite-card.jsx",
+                            lineNumber: 22,
+                            columnNumber: 25
+                        }, undefined),
+                        isHover && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            style: {
+                                position: 'absolute',
+                                bottom: '0',
+                                backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                                color: 'white',
+                                width: '100%',
+                                textAlign: 'center',
+                                padding: '8px',
+                                fontWeight: 'bold',
+                                opacity: '1',
+                                transition: 'opacity 0.3s ease-in-out',
+                                zIndex: '1'
+                            },
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: (event)=>{
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                    removeMovie(movie._id);
+                                },
+                                children: "Remove"
+                            }, void 0, false, {
+                                fileName: "src/components/favorite-card/favorite-card.jsx",
+                                lineNumber: 47,
+                                columnNumber: 29
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/favorite-card/favorite-card.jsx",
+                            lineNumber: 34,
+                            columnNumber: 37
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/favorite-card/favorite-card.jsx",
+                    lineNumber: 18,
+                    columnNumber: 21
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/favorite-card/favorite-card.jsx",
+                lineNumber: 14,
+                columnNumber: 17
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/components/favorite-card/favorite-card.jsx",
+            lineNumber: 13,
+            columnNumber: 13
+        }, undefined)
+    }, movie._id, false, {
+        fileName: "src/components/favorite-card/favorite-card.jsx",
+        lineNumber: 11,
+        columnNumber: 9
+    }, undefined);
+};
+_s(FavoriteCard, "FTC8EpIspi2qaDtU9gFRhqZT02A=");
+_c = FavoriteCard;
+var _c;
+$RefreshReg$(_c, "FavoriteCard");
+
+  $parcel$ReactRefreshHelpers$138a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5kraV":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$17ad = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35812,9 +35988,9 @@ const MovieList = ({ movies, favoriteMovies, handleFavoriteMovies, removeMovie }
     const location = (0, _reactRouterDom.useLocation)();
     //const userInfo = JSON.parse(localStorage.getItem('user')) || {};
     //const favoriteMovies = userInfo.favoriteList || [];
-    const isFavorite = (movie)=>{
-        favoriteMovies.some((fav)=>fav.id === movie.id);
-    };
+    //const isFavorite = (movie) => {
+    //  favoriteMovies.some((fav) => fav.id === movie.id)
+    //};
     const list = location.pathname === "/" ? movies.map((m)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
             className: "mb-4 mt-2",
             md: 3,
@@ -35852,128 +36028,6 @@ $RefreshReg$(_c, "MovieList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","../movie-card/movie-card":"bwuIu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","react-bootstrap":"3AD9A"}],"lTMRU":[function() {},{}],"4OX7W":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$63ae = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$63ae.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "FavoriteList", ()=>FavoriteList);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactRouterDom = require("react-router-dom");
-var _row = require("react-bootstrap/Row");
-var _rowDefault = parcelHelpers.interopDefault(_row);
-var _col = require("react-bootstrap/Col");
-var _colDefault = parcelHelpers.interopDefault(_col);
-const FavoriteList = ({ favoriteMovies, removeMovie })=>{
-    const favList = favoriteMovies.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-            style: {
-                color: 'white'
-            },
-            children: "No movies in your list"
-        }, void 0, false, {
-            fileName: "src/components/favorite-list/favorite-list.jsx",
-            lineNumber: 13,
-            columnNumber: 17
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/favorite-list/favorite-list.jsx",
-        lineNumber: 12,
-        columnNumber: 13
-    }, undefined) : favoriteMovies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-            className: "mb-4 mt-2",
-            md: 3,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "d-flex justify-content-center",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: `movies/${movie.title}`,
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                src: movie.image,
-                                alt: movie.title,
-                                style: {
-                                    maxWidth: '100%',
-                                    height: '200px'
-                                }
-                            }, void 0, false, {
-                                fileName: "src/components/favorite-list/favorite-list.jsx",
-                                lineNumber: 25,
-                                columnNumber: 33
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/favorite-list/favorite-list.jsx",
-                            lineNumber: 24,
-                            columnNumber: 29
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/favorite-list/favorite-list.jsx",
-                        lineNumber: 23,
-                        columnNumber: 25
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/favorite-list/favorite-list.jsx",
-                    lineNumber: 22,
-                    columnNumber: 21
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: ()=>{
-                            removeMovie(movie._id);
-                        },
-                        children: "Remove"
-                    }, void 0, false, {
-                        fileName: "src/components/favorite-list/favorite-list.jsx",
-                        lineNumber: 38,
-                        columnNumber: 25
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/favorite-list/favorite-list.jsx",
-                    lineNumber: 37,
-                    columnNumber: 21
-                }, undefined)
-            ]
-        }, movie._id, true, {
-            fileName: "src/components/favorite-list/favorite-list.jsx",
-            lineNumber: 21,
-            columnNumber: 17
-        }, undefined));
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                style: {
-                    color: 'white'
-                },
-                children: "Favorite Movies"
-            }, void 0, false, {
-                fileName: "src/components/favorite-list/favorite-list.jsx",
-                lineNumber: 52,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                children: favList
-            }, void 0, false, {
-                fileName: "src/components/favorite-list/favorite-list.jsx",
-                lineNumber: 55,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_c = FavoriteList;
-var _c;
-$RefreshReg$(_c, "FavoriteList");
-
-  $parcel$ReactRefreshHelpers$63ae.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"fdOAw","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6"}]},["aSUwb","7qMjn","d8Dch"], "d8Dch", "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","../movie-card/movie-card":"bwuIu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","react-bootstrap":"3AD9A"}],"lTMRU":[function() {},{}]},["aSUwb","7qMjn","d8Dch"], "d8Dch", "parcelRequire94c2")
 
 //# sourceMappingURL=index.b4b6dfad.js.map

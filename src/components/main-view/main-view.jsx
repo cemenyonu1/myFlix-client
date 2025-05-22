@@ -23,6 +23,7 @@ export const MainView = () => {
     const [movies, setMovies] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState(null);
 
+
     const getParsedFavorites = () => {
         try {
             const stored = localStorage.getItem('user.favoriteMovies');
@@ -242,12 +243,12 @@ export const MainView = () => {
                                     {!user ? (
                                         <Navigate to="/login" replace />
                                     ) : (
-                                        <Col md={8}>
-                                            <FavoriteList
-                                                favoriteMovies={favoriteMovies}
-                                                removeMovie={removeMovie}
-                                            />
-                                        </Col>
+
+                                        <FavoriteList
+                                            favoriteMovies={favoriteMovies}
+                                            removeMovie={removeMovie}
+                                        />
+
 
                                     )}
                                 </>

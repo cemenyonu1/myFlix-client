@@ -10,12 +10,7 @@ export const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies, removeM
 
     const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
 
-    //const favoriteMovieList = JSON.parse(localStorage.getItem('user.favoriteMovies'));
-    //const [favoriteMovies, setFavoriteMovies] = useState(() => {
-    //    const stored = localStorage.getItem('user.favoriteMovies');
-    //    return stored ? JSON.parse(stored) : [];
-    // });
-    //const [username, setUsername] = useState(localStorage.getItem('username'));
+    const [isHover, setIsHover] = useState(false);
 
     const addToFav = (movie) => {
         handleFavoriteMovies((prev) => {
@@ -30,21 +25,52 @@ export const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies, removeM
 
     };
 
+
+
     const addLabel = favoriteMovies.find((m) => m._id === movie._id);
 
     return (
         <>
             <Card className="h-100">
-                <Link to={`/movies/${encodeURIComponent(movie.title)}`}>
-                    <Card.Img variant="top" src={movie.image} />
+                <div
+                    className='image-container'
+                    onMouseEnter={() => setIsHover(true)}
+                    onMouseLeave={() => setIsHover(false)}
+                >
+                    <Link
+                        to={`/movies/${encodeURIComponent(movie.title)}`}
+                    >
+                        <Card.Img
+                            variant="top"
+                            src={movie.image}
+                            style={{
+                                maxWidth: '100%',
+                                height: '400px'
+                            }}
+                        />
+                        {isHover && <div style={{
+                            position: 'absolute',
+                            bottom: '0',
+                            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                            color: 'white',
+                            width: '100%',
+                            textAlign: 'center',
+                            padding: '8px',
+                            fontWeight: 'bold',
+                            opacity: '1',
+                            transition: 'opacity 0.3s ease-in-out',
+                            zIndex: '1'
+                        }}>
+                            {movie.title}<br />
+                            <button onClick={(event) => {
+                                event.preventDefault();
+                                event.stopPropagation();
+                                addLabel ? removeMovie(movie._id) : addToFav(movie);
+                            }}>{addLabel ? 'Remove From My List' : 'Add To My List'}</button>
+                        </div>}
 
-                </Link>
-                <Card.Body>
-                    <Card.Title>{movie.title}</Card.Title>
-                    <button onClick={() => {
-                        addLabel ? removeMovie(movie._id) : addToFav(movie);
-                    }}>{addLabel ? 'Remove from list' : 'Add to Favorites'}</button>
-                </Card.Body>
+                    </Link>
+                </div>
             </Card>
 
         </>

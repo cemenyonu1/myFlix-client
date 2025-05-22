@@ -10,9 +10,9 @@ export const MovieList = ({ movies, favoriteMovies, handleFavoriteMovies, remove
     //const userInfo = JSON.parse(localStorage.getItem('user')) || {};
     //const favoriteMovies = userInfo.favoriteList || [];
 
-    const isFavorite = (movie) => {
-        favoriteMovies.some((fav) => fav.id === movie.id)
-    };
+    //const isFavorite = (movie) => {
+    //  favoriteMovies.some((fav) => fav.id === movie.id)
+    //};
 
     const list = location.pathname === "/" ? movies.map((m) => (
         <Col className="mb-4 mt-2" key={m.id} md={3}>
