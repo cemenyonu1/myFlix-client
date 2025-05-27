@@ -2,25 +2,24 @@ import React, { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { FavoriteList } from "../favorite-list/favorite-list";
+import { useNavigate } from "react-router-dom";
 
 export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
     const user = JSON.parse(localStorage.getItem("user") || "null");
+    const navigate = useNavigate();
 
     const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
 
     const [username, setUsername] = useState(user.username || null);
     const [editing, setEditing] = useState(false);
-    //const [favoriteMovies, setFavoriteMovies] = useState(
-    //  JSON.parse(localStorage.getItem('user.favoriteMovies')) || []
-    //);
     const [formData, setFormData] = useState({
         username: "",
         email: "",
-        favoriteMovies: "",
+        password: "",
     });
 
     const handleLogout = () => {
-        Navigate('/login')
+        navigate('/login')
     };
 
     useEffect(() => {
@@ -60,69 +59,34 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
         }
     };
 
-    const deleteFav = (movieId) => {
-        if (!username) {
-            console.log('There is no username')
-        };
-
-        token = localStorage.getItem('token');
-
-        fetch(url + `users/${username}/${movieId}`, {
-            Method: "DELETE",
+    const handleSave = (e) => {
+        e.preventDefault();
+        const token = localStorage.getItem("token");
+        fetch(`${url}/users/${user.username}`, {
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
                 Authorization: `Bearer ${token}`
-            }
-
-        }).then((response) => {
+            },
+            body: json.stringify({
+                username: formData.username,
+                email: formData.email,
+                password: formData.password
+            })
+        }.then((response) => {
             if (!response.ok) {
-                throw new Error("Movie was not able to be removed from list")
-            }
-            return response.json();
-        }).then(() => {
-            setFavoriteMovies = (favoriteMovies.filter((m) => String(m.id) !== String(movieId)))
-        }).catch((err) => console.log(err))
+                throw new error('Account not updated');
+                return response.json;
+            };
+        }).then((updatedUser) => {
+            localStorage.setItem('user', json.stringify(updatedUser));
+            setEditing(false);
+        }).catch((err) => {
+            console.log(err)
+        })
+        )
     }
 
-    //const favList = () => {
-    //    const [isHover, setIsHover] = useState(false);
-    //    favoriteMovies.length === 0 ? (
-    //        <Col>
-    //            <h5>No movies in your list</h5>
-    //        </Col>
-    //    ) :
-    //        (favoriteMovies.map((movie) => (
-    //            <Col className="mb-4 mt-2" md={3} key={movie._id}>
-    //                <Row>
-    //                    <div
-    //                        className='d-flex justify-content-center'
-    //                        onMouseEnter={() => { setIsHover(true) }}
-    //                        onMouseLeave={() => { setIsHover(false) }}
-    //                    >
-    //                        <img
-    //                            src={movie.image}
-    //                          alt={movie.title}
-    //                           className="w-full h-auto rounded"
-    //                            style={{
-    //                                maxWidth: '100%',
-    //                               height: '200px',
-    //                               objectFit: 'cover'
-    //                           }}
-    //                        />
-    //                    </div>
-    //                    {isHover && <div>
-    //                        <button onClick={() => {
-    //                            { removeMovie(movie._id) }
-    //                        }}>
-    //                            Remove
-    //                        </button>
-    //                    </div>
-    //                    }
-    //                </Row>
-    //            </Col>
-    //        )))
-
-    //}
 
     return (
         <div className="p-4 max-w-md mx-auto bg-white shadow-md rounded-lg">
@@ -131,9 +95,6 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                 <>
                     <p>
                         <strong>Username:</strong> {user.username}
-                    </p>
-                    <p>
-                        <strong>Password:</strong> {user.password}
                     </p>
                     <p>
                         <strong>Email:</strong> {user.email}
@@ -168,7 +129,8 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                             id="username"
                             name="username"
                             type="text"
-                            value={formData.username}
+                            placeholder={formData.username}
+                            onChange={(e) => setFormData({ ...prev, username: e.target.value })}
                             className="w-full p-2 border rounded"
                         />
                     </div>
@@ -190,14 +152,33 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                             className="w-full p-2 border rounded"
                         />
                     </div>
-                    <button type="submit" onClick={deleteUser}>
+                    <div className="mb-4">
+                        <label
+                            htmlFor="password"
+                            className="block"
+                            style={{
+                                color: 'black',
+                                padding: '10px'
+                            }}>
+                            Password
+                        </label>
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder={formData.password}
+                            className="w-full p-2 border rounded"
+                        />
+                    </div>
+                    <button onClick={deleteUser}>
                         Delete Account
                     </button>
-                    <button type="submit" className="p-2 bg-green-500 text-white rounded">
+                    <button onClick={handleSave} className="p-2 bg-green-500 text-white rounded">
                         Save Changes
                     </button>
                 </form>
-            )}
+            )
+            }
             <div className='border rounded p-2'>
                 <Row className='justify-content-md-center'>
                     <FavoriteList
@@ -206,6 +187,6 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                     />
                 </Row>
             </div>
-        </div>
+        </div >
     );
 };
