@@ -45,6 +45,11 @@ export const FavoriteCard = ({ movie, removeMovie }) => {
                             zIndex: '1'
                         }}>
                             <button
+                                style={{
+                                    backgroundColor: "rgb(141, 118, 5)",
+                                    padding: "5%",
+                                    border: "0"
+                                }}
                                 onClick={(event) => {
                                     event.preventDefault();
                                     event.stopPropagation();

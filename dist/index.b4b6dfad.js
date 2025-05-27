@@ -35619,10 +35619,27 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                children: "Email:"
+                                children: "Password:"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
                                 lineNumber: 136,
+                                columnNumber: 25
+                            }, undefined),
+                            " ",
+                            user.password
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/account-view/account-view.jsx",
+                        lineNumber: 135,
+                        columnNumber: 21
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                children: "Email:"
+                            }, void 0, false, {
+                                fileName: "src/components/account-view/account-view.jsx",
+                                lineNumber: 139,
                                 columnNumber: 25
                             }, undefined),
                             " ",
@@ -35630,7 +35647,24 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 135,
+                        lineNumber: 138,
+                        columnNumber: 21
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                children: "Birthday:"
+                            }, void 0, false, {
+                                fileName: "src/components/account-view/account-view.jsx",
+                                lineNumber: 142,
+                                columnNumber: 25
+                            }, undefined),
+                            " ",
+                            user.birthday
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/account-view/account-view.jsx",
+                        lineNumber: 141,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35639,7 +35673,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         children: "Edit"
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 138,
+                        lineNumber: 144,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35647,34 +35681,12 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                             children: "Favorite Movies:"
                         }, void 0, false, {
                             fileName: "src/components/account-view/account-view.jsx",
-                            lineNumber: 145,
+                            lineNumber: 151,
                             columnNumber: 25
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 144,
-                        columnNumber: 21
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "border rounded p-2",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
-                            className: "justify-content-md-center",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favoriteList.FavoriteList), {
-                                favoriteMovies: favoriteMovies,
-                                removeMovie: removeMovie
-                            }, void 0, false, {
-                                fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 149,
-                                columnNumber: 29
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/account-view/account-view.jsx",
-                            lineNumber: 148,
-                            columnNumber: 25
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 147,
+                        lineNumber: 150,
                         columnNumber: 21
                     }, undefined)
                 ]
@@ -35693,7 +35705,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 children: "Username"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 159,
+                                lineNumber: 158,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35704,13 +35716,13 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 className: "w-full p-2 border rounded"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 168,
+                                lineNumber: 167,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 158,
+                        lineNumber: 157,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35726,7 +35738,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 children: "Email"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 177,
+                                lineNumber: 176,
                                 columnNumber: 25
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35737,13 +35749,13 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                                 className: "w-full p-2 border rounded"
                             }, void 0, false, {
                                 fileName: "src/components/account-view/account-view.jsx",
-                                lineNumber: 186,
+                                lineNumber: 185,
                                 columnNumber: 25
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 176,
+                        lineNumber: 175,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35752,7 +35764,7 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         children: "Delete Account"
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 194,
+                        lineNumber: 193,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35761,14 +35773,36 @@ const AccountView = ({ onLogout, favoriteMovies, removeMovie })=>{
                         children: "Save Changes"
                     }, void 0, false, {
                         fileName: "src/components/account-view/account-view.jsx",
-                        lineNumber: 197,
+                        lineNumber: 196,
                         columnNumber: 21
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/account-view/account-view.jsx",
-                lineNumber: 157,
+                lineNumber: 156,
                 columnNumber: 17
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "border rounded p-2",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
+                    className: "justify-content-md-center",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _favoriteList.FavoriteList), {
+                        favoriteMovies: favoriteMovies,
+                        removeMovie: removeMovie
+                    }, void 0, false, {
+                        fileName: "src/components/account-view/account-view.jsx",
+                        lineNumber: 203,
+                        columnNumber: 21
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/account-view/account-view.jsx",
+                    lineNumber: 202,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/account-view/account-view.jsx",
+                lineNumber: 201,
+                columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
@@ -35916,6 +35950,11 @@ const FavoriteCard = ({ movie, removeMovie })=>{
                                 zIndex: '1'
                             },
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                style: {
+                                    backgroundColor: "rgb(141, 118, 5)",
+                                    padding: "5%",
+                                    border: "0"
+                                },
                                 onClick: (event)=>{
                                     event.preventDefault();
                                     event.stopPropagation();

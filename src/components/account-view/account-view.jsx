@@ -133,7 +133,13 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                         <strong>Username:</strong> {user.username}
                     </p>
                     <p>
+                        <strong>Password:</strong> {user.password}
+                    </p>
+                    <p>
                         <strong>Email:</strong> {user.email}
+                    </p>
+                    <p>
+                        <strong>Birthday:</strong> {user.birthday}
                     </p>
                     <button
                         onClick={() => setEditing(true)}
@@ -144,14 +150,7 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                     <p>
                         <strong>Favorite Movies:</strong>
                     </p>
-                    <div className='border rounded p-2'>
-                        <Row className='justify-content-md-center'>
-                            <FavoriteList
-                                favoriteMovies={favoriteMovies}
-                                removeMovie={removeMovie}
-                            />
-                        </Row>
-                    </div>
+
                 </>
             ) : (
                 <form>
@@ -199,6 +198,14 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                     </button>
                 </form>
             )}
+            <div className='border rounded p-2'>
+                <Row className='justify-content-md-center'>
+                    <FavoriteList
+                        favoriteMovies={favoriteMovies}
+                        removeMovie={removeMovie}
+                    />
+                </Row>
+            </div>
         </div>
     );
 };
