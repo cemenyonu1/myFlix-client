@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import { FavoriteList } from "../favorite-list/favorite-list";
 import { useNavigate } from "react-router-dom";
 
-export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
+export const AccountView = ({ onLoggedOut, favoriteMovies, removeMovie, storedToken }) => {
     const user = JSON.parse(localStorage.getItem("user") || "null");
     const navigate = useNavigate();
 
@@ -13,24 +13,25 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
     const [username, setUsername] = useState(user.username || null);
     const [editing, setEditing] = useState(false);
     const [formData, setFormData] = useState({
-        username: "",
-        email: "",
-        password: "",
+        username: user?.username || "",
+        email: user?.email || "",
+        password: user?.password || "",
     });
+    const currentUsername = user?.username || username;
 
     const handleLogout = () => {
         navigate('/login')
     };
 
-    useEffect(() => {
-        if (user) {
-            setFormData({
-                username: user.username,
-                email: user.email,
-                favoriteMovies: user.favoriteMovies.join(", "),
-            });
-        }
-    }, [user]);
+    // useEffect(() => {
+    //     if (user) {
+    //         setFormData({
+    //             username: user.username,
+    //             email: user.email,
+    //             password: ""
+    //         });
+    //     }
+    //}, [user]);
 
     if (!user) {
         return <div>No user data found.</div>;
@@ -38,21 +39,21 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
 
     const deleteUser = () => {
         if (window.confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
-            const token = localStorage.getItem('token');
 
-            fetch(url + `/users/${username}`, {
+
+            fetch(url + `/users/${currentUsername}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`
+                    Authorization: `Bearer ${storedToken}`
                 }
             }).then((response) => {
                 if (!response.ok) {
-                    console.error(`That didn't go well`)
+                    throw new Error(`That didn't go well`)
                 }
-                return response.json();
+                // return response.json();
             }).then(() => {
-                onLogout();
+                onLoggedOut();
             }).catch((error) => {
                 console.log(error)
             })
@@ -61,30 +62,46 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
 
     const handleSave = (e) => {
         e.preventDefault();
-        const token = localStorage.getItem("token");
-        fetch(`${url}/users/${user.username}`, {
+
+        console.log("Save button clicked");
+
+        const updatedData = {
+            newUsername: formData.username,
+            newEmail: formData.email,
+            newPassword: formData.password
+        }
+
+        if (formData.password.trim() !== "") {
+            updatedData.password = formData.password
+        }
+
+        console.log("Sending form data: " + updatedData)
+
+        fetch(url + `/users/${currentUsername}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`
+                Authorization: `Bearer ${storedToken}`
             },
-            body: json.stringify({
-                username: formData.username,
-                email: formData.email,
-                password: formData.password
-            })
-        }.then((response) => {
+            body: JSON.stringify(updatedData)
+        }).then((response) => {
             if (!response.ok) {
-                throw new error('Account not updated');
-                return response.json;
+                throw new Error('Account not updated: ' + response);
             };
+            return response.json();
         }).then((updatedUser) => {
-            localStorage.setItem('user', json.stringify(updatedUser));
-            setEditing(false);
-        }).catch((err) => {
+            setUsername(updatedData.newUsername);
+            setFormData({
+                username: updatedData.newUsername,
+                email: updatedData.newEmail,
+                password: ""
+            });
+            localStorage.setItem('user', JSON.stringify(formData));
+        }
+        ).catch((err) => {
             console.log(err)
         })
-        )
+        setEditing(false);
     }
 
 
@@ -114,7 +131,7 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
 
                 </>
             ) : (
-                <form>
+                <form onSubmit={handleSave}>
                     <div className="mb-4">
                         <label
                             htmlFor="username"
@@ -129,8 +146,9 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                             id="username"
                             name="username"
                             type="text"
+                            value={formData.username}
                             placeholder={formData.username}
-                            onChange={(e) => setFormData({ ...prev, username: e.target.value })}
+                            onChange={(e) => setFormData({ ...formData, username: e.target.value })}
                             className="w-full p-2 border rounded"
                         />
                     </div>
@@ -149,6 +167,7 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                             name="email"
                             type="email"
                             value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             className="w-full p-2 border rounded"
                         />
                     </div>
@@ -166,14 +185,21 @@ export const AccountView = ({ onLogout, favoriteMovies, removeMovie }) => {
                             id="password"
                             name="password"
                             type="password"
-                            placeholder={formData.password}
+                            value={formData.password}
+                            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                            placeholder="Password"
                             className="w-full p-2 border rounded"
                         />
                     </div>
-                    <button onClick={deleteUser}>
+                    <button onClick={(e) => {
+                        e.preventDefault();
+                        deleteUser()
+                    }}>
                         Delete Account
                     </button>
-                    <button onClick={handleSave} className="p-2 bg-green-500 text-white rounded">
+                    <button
+                        type="submit"
+                        className="p-2 bg-green-500 text-white rounded">
                         Save Changes
                     </button>
                 </form>

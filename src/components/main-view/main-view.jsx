@@ -134,17 +134,18 @@ export const MainView = () => {
     //if (movies.length === 0) {
     //  return <div>There are no movies!</div>;
     //}
+    const onLoggedOut = () => {
+        setUser(null);
+        setToken(null);
+        localStorage.clear();
+    };
 
     return (
         <BrowserRouter>
             <div id="main-view">
                 <NavigationBar
                     user={user}
-                    onLoggedOut={() => {
-                        setUser(null);
-                        setToken(null);
-                        localStorage.clear();
-                    }}
+                    onLoggedOut={onLoggedOut}
                 />
                 <Row className="justify-content-md-center">
                     <Routes>
@@ -229,6 +230,8 @@ export const MainView = () => {
                                             <AccountView
                                                 favoriteMovies={favoriteMovies}
                                                 removeMovie={removeMovie}
+                                                onLoggedOut={onLoggedOut}
+                                                storedToken={storedToken}
                                             />
                                         </Col>
 
