@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import Container from "react-bootstrap/Container";
 import "./index.scss";
-
+import { BrowserRouter } from "react-router-dom";
 import { MainView } from "./components/main-view/main-view";
 
 
@@ -9,7 +9,9 @@ import { MainView } from "./components/main-view/main-view";
 const MyFlixApplication = () => {
     return (
         <Container>
-            <MainView />
+            <BrowserRouter>
+                <MainView />
+            </BrowserRouter>
         </Container>
     );
 };

@@ -12,10 +12,12 @@ import { AccountView } from "../account-view/account-view";
 import { MovieList } from "../movie-list/movie-list";
 import "./main-view.css";
 import { FavoriteList } from "../favorite-list/favorite-list";
+import { useLocation } from "react-router-dom";
 
 const url = "https://charlese-movieapp-71f7e695f2c4.herokuapp.com";
 
 export const MainView = () => {
+    const location = useLocation();
     const storedUser = JSON.parse(localStorage.getItem("user"));
     const storedToken = JSON.parse(localStorage.getItem("token"));
     const [user, setUser] = useState(storedUser);
@@ -140,127 +142,132 @@ export const MainView = () => {
         localStorage.clear();
     };
 
+    const isAuthPage = location.pathname === "/login" || location.pathname === "/signup";
+
     return (
-        <BrowserRouter>
-            <div id="main-view">
+        // <BrowserRouter>
+        <div id="main-view" className={isAuthPage ? "login-page" : ""}>
+            {!isAuthPage && (
                 <NavigationBar
                     user={user}
                     onLoggedOut={onLoggedOut}
                 />
-                <Row className="justify-content-md-center">
-                    <Routes>
-                        <Route
-                            path="/signup"
-                            element={
-                                <>
-                                    {user ? (
-                                        <Navigate to="/" />
-                                    ) : (
-                                        <Col md={12}>
-                                            <SignupView />
-                                        </Col>
-                                    )}
-                                </>
-                            }
-                        />
-                        <Route
-                            path="/login"
-                            element={
-                                <>
-                                    {user ? (
-                                        <Navigate to="/" />
-                                    ) : (
-                                        <Col md={12}>
-                                            <LoginView
-                                                onLoggedIn={(user, token) => {
-                                                    setUser(user);
-                                                    setToken(token);
-                                                }}
-                                            />
-                                        </Col>
-                                    )}
-                                </>
-                            }
-                        />
-                        <Route
-                            path="/movies/:movieTitle"
-                            element={
-                                <>
-                                    {!user ? (
-                                        <Navigate to="/login" replace />
-                                    ) : movies.length === 0 ? (
-                                        <Col>There are no movies available.</Col>
-                                    ) : (
-                                        <Col md={8}>
-                                            <MovieView movies={movies} />
-                                        </Col>
-                                    )}
-                                </>
-                            }
-                        />
-                        <Route
-                            path="/"
-                            element={
-                                <>
-                                    {!user ? (
-                                        <Navigate to="/login" replace />
-                                    ) : movies.length === 0 ? (
-                                        <Col>There are no movies available</Col>
-                                    ) : (
+            )}
 
-                                        <MovieList
-                                            movies={movies}
-                                            favoriteMovies={favoriteMovies}
-                                            handleFavoriteMovies={handleFavoriteMovies}
-                                            removeMovie={removeMovie}
+            <Row className="justify-content-md-center">
+                <Routes>
+                    <Route
+                        path="/signup"
+                        element={
+                            <>
+                                {user ? (
+                                    <Navigate to="/" />
+                                ) : (
+                                    <Col md={12}>
+                                        <SignupView />
+                                    </Col>
+                                )}
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/login"
+                        element={
+                            <>
+                                {user ? (
+                                    <Navigate to="/" />
+                                ) : (
+                                    <Col md={12}>
+                                        <LoginView
+                                            onLoggedIn={(user, token) => {
+                                                setUser(user);
+                                                setToken(token);
+                                            }}
                                         />
+                                    </Col>
+                                )}
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/movies/:movieTitle"
+                        element={
+                            <>
+                                {!user ? (
+                                    <Navigate to="/login" replace />
+                                ) : movies.length === 0 ? (
+                                    <Col>There are no movies available.</Col>
+                                ) : (
+                                    <Col md={8}>
+                                        <MovieView movies={movies} />
+                                    </Col>
+                                )}
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                {!user ? (
+                                    <Navigate to="/login" replace />
+                                ) : movies.length === 0 ? (
+                                    <Col>There are no movies available</Col>
+                                ) : (
 
-                                    )}
-                                </>
-                            }
-                        />
-                        <Route
-                            path="/users"
-                            element={
-                                <>
-                                    {!user ? (
-                                        <Navigate to="/login" replace />
-                                    ) : (
-                                        <Col md={8}>
-                                            <AccountView
-                                                favoriteMovies={favoriteMovies}
-                                                removeMovie={removeMovie}
-                                                onLoggedOut={onLoggedOut}
-                                                storedToken={storedToken}
-                                            />
-                                        </Col>
+                                    <MovieList
+                                        movies={movies}
+                                        favoriteMovies={favoriteMovies}
+                                        handleFavoriteMovies={handleFavoriteMovies}
+                                        removeMovie={removeMovie}
+                                    />
 
-                                    )}
-                                </>
-                            }
-                        />
-                        <Route
-                            path="/my-list"
-                            element={
-                                <>
-                                    {!user ? (
-                                        <Navigate to="/login" replace />
-                                    ) : (
-
-                                        <FavoriteList
+                                )}
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/users"
+                        element={
+                            <>
+                                {!user ? (
+                                    <Navigate to="/login" replace />
+                                ) : (
+                                    <Col md={8}>
+                                        <AccountView
                                             favoriteMovies={favoriteMovies}
                                             removeMovie={removeMovie}
+                                            onLoggedOut={onLoggedOut}
+                                            storedToken={storedToken}
                                         />
+                                    </Col>
+
+                                )}
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/my-list"
+                        element={
+                            <>
+                                {!user ? (
+                                    <Navigate to="/login" replace />
+                                ) : (
+
+                                    <FavoriteList
+                                        favoriteMovies={favoriteMovies}
+                                        removeMovie={removeMovie}
+                                    />
 
 
-                                    )}
-                                </>
-                            }
-                        />
-                    </Routes>
-                </Row>
-            </div>
-        </BrowserRouter>
+                                )}
+                            </>
+                        }
+                    />
+                </Routes>
+            </Row>
+        </div>
+        //  </BrowserRouter>
 
         //   <React.Fragment>
 

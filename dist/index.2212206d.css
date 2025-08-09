@@ -13163,23 +13163,38 @@ textarea.form-control-lg {
   padding: 4px 12px;
 }
 
-#login-card {
-  background-color: #8d7605;
-  border: 0;
-  padding: 5%;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .login-container {
   color: #fff;
   background: url("movie-theater11.37d8aec9.svg") center / cover no-repeat;
-  border: 0;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  min-height: 100vh;
-  padding: 0;
+  margin-left: -9.2rem;
   display: flex;
+  padding: 0 !important;
+}
+
+.login-container .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.login-container .col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#login-card {
+  background-color: #8d7605;
+  border: 0;
+  padding: 5%;
 }
 
 #submit {
@@ -13212,8 +13227,7 @@ textarea.form-control-lg {
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
-  margin-top: -3.5rem;
-  margin-left: -39.5rem;
+  margin-left: -9.2rem;
   padding: 0;
   display: flex;
 }
@@ -13231,5 +13245,9 @@ Form {
 #main-view {
   background: linear-gradient(0deg, #b39800 0%, #000 100%);
   padding: 5rem;
+}
+
+#main-view.login-page {
+  padding: 0;
 }
 /*# sourceMappingURL=index.2212206d.css.map */
