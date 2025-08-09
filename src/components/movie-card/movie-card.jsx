@@ -62,11 +62,18 @@ export const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies, removeM
                             zIndex: '1'
                         }}>
                             {movie.title}<br />
-                            <button onClick={(event) => {
-                                event.preventDefault();
-                                event.stopPropagation();
-                                addLabel ? removeMovie(movie._id) : addToFav(movie);
-                            }}>{addLabel ? 'Remove From My List' : 'Add To My List'}</button>
+                            <button
+                                style={{
+                                    backgroundColor: "rgb(141, 118, 5)",
+                                    padding: "5%",
+                                    border: "0",
+                                    marginTop: "10px"
+                                }}
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                    addLabel ? removeMovie(movie._id) : addToFav(movie);
+                                }}>{addLabel ? 'Remove From My List' : 'Add To My List'}</button>
                         </div>}
 
                     </Link>

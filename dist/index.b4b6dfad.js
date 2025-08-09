@@ -19655,6 +19655,12 @@ const MovieCard = ({ movie, favoriteMovies, handleFavoriteMovies, removeMovie })
                                     columnNumber: 42
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    style: {
+                                        backgroundColor: "rgb(141, 118, 5)",
+                                        padding: "5%",
+                                        border: "0",
+                                        marginTop: "10px"
+                                    },
                                     onClick: (event)=>{
                                         event.preventDefault();
                                         event.stopPropagation();
